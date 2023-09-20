@@ -9,6 +9,7 @@ import Home from "./assets/Home/Home";
 import About from "./assets/About/About";
 import Contact from "./assets/Contact/Contact";
 import Users from "./assets/Users/Users";
+import UserDetails from "./assets/UserDetails/UserDetails";
 
 const router = createBrowserRouter([
   {
@@ -25,8 +26,12 @@ const router = createBrowserRouter([
       },
       {
         path:"/users",
-        loader: () => fetch ('https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772') ,
+        loader: () => fetch ('https://www.themealdb.com/api/json/v1/1/search.php?s=') ,
         element:<Users></Users>
+      },
+      {
+        path:'/user/:1',
+        element:<UserDetails></UserDetails>
       },
     ],
   },
