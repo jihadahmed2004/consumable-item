@@ -10,11 +10,13 @@ import About from "./assets/About/About";
 import Contact from "./assets/Contact/Contact";
 import Users from "./assets/Users/Users";
 import UserDetails from "./assets/UserDetails/UserDetails";
+import ErrorPage from "./ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home> </Home>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/about",
