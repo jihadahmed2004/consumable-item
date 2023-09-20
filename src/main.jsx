@@ -26,11 +26,12 @@ const router = createBrowserRouter([
       },
       {
         path:"/users",
-        loader: () => fetch ('https://www.themealdb.com/api/json/v1/1/search.php?s=') ,
+        loader: () => fetch ('https://www.themealdb.com/api/json/v1/1/categories.php') ,
         element:<Users></Users>
       },
       {
-        path:'/user/:1',
+        path:'/user/:userId',
+        loader: () => fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood'),
         element:<UserDetails></UserDetails>
       },
     ],
